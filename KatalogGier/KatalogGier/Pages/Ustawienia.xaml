@@ -1,0 +1,215 @@
+﻿<Page x:Class="KatalogGier.Pages.Ustawienia"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KatalogGier.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Ustawienia"
+      Loaded="Page_Loaded">
+    <Page.Resources>
+        <ControlTemplate x:Key="ScrollViewTemplate" TargetType="{x:Type ScrollViewer}">
+            <Border BorderBrush="{TemplateBinding BorderBrush}"
+
+            BorderThickness="{TemplateBinding BorderThickness}"
+
+            HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+
+            VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                <Grid 
+                    Background="#474646"
+                    HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <ScrollContentPresenter 
+                        Grid.Column="0" Grid.ColumnSpan="2"
+                        Grid.Row="0" Grid.RowSpan="2"
+                        KeyboardNavigation.DirectionalNavigation="Local"
+                        CanContentScroll="True"
+                        CanHorizontallyScroll="False"
+                        CanVerticallyScroll="True"
+                    />
+
+                    <ScrollBar Name="PART_VerticalScrollBar"
+
+                   Grid.Column="1" Grid.Row="0"
+
+                   Padding="0,0,0,3"
+                   
+                   Background="#474646"
+
+                   Value="{TemplateBinding VerticalOffset}"
+
+                   Maximum="{TemplateBinding ScrollableHeight}"
+
+                   ViewportSize="{TemplateBinding ViewportHeight}"
+
+                   Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"/>
+                </Grid>
+            </Border>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="defaulttemplate" TargetType="{x:Type ListView}">
+            <Border BorderBrush="{TemplateBinding BorderBrush}"
+          BorderThickness="{TemplateBinding BorderThickness}"
+          Background="{TemplateBinding Background}"
+          Padding="1"
+          SnapsToDevicePixels="True">
+                <ScrollViewer Focusable="False"
+
+                   Padding="{TemplateBinding Padding}"
+
+                   Template="{StaticResource ScrollViewTemplate}"
+                   >
+                    <ItemsPresenter/>
+                </ScrollViewer>
+            </Border>
+        </ControlTemplate>
+        <Style x:Key="ListViewLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="Margin" Value="10,0,0,5"/>
+
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="Foreground" Value="#474646"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="LabelUstawienia" TargetType="Label">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="#474646"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border 
+                         Background="{TemplateBinding Background}" 
+                         BorderBrush="{TemplateBinding BorderBrush}" 
+                         BorderThickness="{TemplateBinding BorderThickness}" 
+                         Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Background" Value="#535453"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <DataTemplate x:Key="GameList">
+            <Grid Margin="0,0,0,20" Background="#474646" Width="{TemplateBinding Width}" Tag="{Binding Path=Gra_Id}" MouseLeftButtonUp="WybranaGra">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Grid.RowSpan="3" Name="gameIcon" Width="200" Source="{Binding Path=Image}"/>
+                <Label Style="{StaticResource ListViewLabel}" Margin="10,0,0,0"  Grid.Column="1" Name="gameLabelNazwa" Content="{Binding Path=Nazwa}"/>
+                <DockPanel Margin="10,0,0,10"  Grid.Column="1" Grid.Row="1">
+                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Right" Style="{StaticResource ListViewLabel}"  Name="gameLabelTyp" Content="{Binding Path=Srednia_ocena}"/>
+                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Style="{StaticResource ListViewLabel}">/5</Label>
+                </DockPanel>
+            </Grid>
+        </DataTemplate>
+
+    </Page.Resources>
+    <Grid Background="#474646">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Margin="20" HorizontalAlignment="Left">
+                <Image Height="20" Source="/Icons/back.png" MouseLeftButtonUp="Powrot"/>
+            </StackPanel>
+            <Label Style="{StaticResource LabelUstawienia}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2">
+                USTAWIENIA
+            </Label>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid>
+                <Label Name="brakLabel" HorizontalContentAlignment="Center">Brak ocenionych gier</Label>
+                <ListView Template="{StaticResource defaulttemplate}" BorderThickness="0" Margin="20,0,0,50" HorizontalAlignment="Stretch" Name="listaOcenionychGierListView" ItemTemplate="{StaticResource GameList}" Background="#474646">
+
+                </ListView>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Label VerticalContentAlignment="Center">Login</Label>
+                    <TextBox Name="loginTextBox" Grid.Column="1"></TextBox>
+                    <Label VerticalContentAlignment="Center" Grid.Row="1">Haslo</Label>
+                    <TextBox Name="hasloTextBox" Grid.Column="1" Grid.Row="1"></TextBox>
+                    <Label VerticalContentAlignment="Center" Grid.Row="2">Wyswietlana nazwa</Label>
+                    <TextBox Name="wyswietlanaTextBox" Grid.Column="1" Grid.Row="2"></TextBox>
+                    <StackPanel Margin="10,10,0,0" Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" >
+                        <Button Click="AktualizujDane">Zaktualizuj</Button>
+                        <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
+                            <Image MouseLeftButtonUp="DeleteUser" Source="/Icons/trash.png" Width="15"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

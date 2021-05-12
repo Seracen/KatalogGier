@@ -1,0 +1,141 @@
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\KatalogGier.exe.config
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\KatalogGier.exe
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\KatalogGier.pdb
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\KatalogGier.csprojAssemblyReference.cache
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\MainWindow.g.cs
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\Pages\Logowanie.g.cs
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\App.g.cs
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\KatalogGier_MarkupCompile.cache
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\KatalogGier_MarkupCompile.lref
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\MainWindow.baml
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\Pages\Logowanie.baml
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\KatalogGier.g.resources
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\KatalogGier.Properties.Resources.resources
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\KatalogGier.csproj.GenerateResource.cache
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\KatalogGier.csproj.CoreCompileInputs.cache
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\KatalogGier.exe
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\KatalogGier.pdb
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\Kontrolki\HasloKontrolka.g.cs
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\Kontrolki\HasloKontrolka.baml
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\Pages\Rejestracja.g.cs
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\Pages\Rejestracja.baml
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\mongocrypt.dll
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\Crc32C.NET.dll
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\DnsClient.dll
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\MongoDB.Bson.dll
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\MongoDB.Driver.dll
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\MongoDB.Libmongocrypt.dll
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\SharpCompress.dll
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\Snappy.NET.dll
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\System.Buffers.dll
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\Crc32C.NET.xml
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\DnsClient.xml
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\MongoDB.Bson.xml
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\MongoDB.Driver.xml
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\MongoDB.Driver.Core.xml
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\Snappy.NET.xml
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\bin\Debug\System.Buffers.xml
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\KatalogGier_Content.g.cs
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\KatalogGier.csproj.CopyComplete
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\Pages\MainPage.g.cs
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\Pages\MainPage.baml
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\Pages\Ustawienia.g.cs
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\Pages\Ustawienia.baml
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\Pages\OcenianieGier.g.cs
+C:\Users\marek\source\repos\KatalogGier\KatalogGier\obj\Debug\Pages\OcenianieGier.baml
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\mongocrypt.dll
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\KatalogGier.exe.config
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\KatalogGier.exe
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\KatalogGier.pdb
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\Crc32C.NET.dll
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\DnsClient.dll
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\MongoDB.Bson.dll
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\MongoDB.Driver.Core.dll
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\MongoDB.Driver.dll
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\MongoDB.Libmongocrypt.dll
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\SharpCompress.dll
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\Snappy.NET.dll
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\System.Buffers.dll
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\Crc32C.NET.xml
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\DnsClient.xml
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\MongoDB.Bson.xml
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\MongoDB.Driver.xml
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\MongoDB.Driver.Core.xml
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\Snappy.NET.xml
+F:\Zajecia SM9\KatalogGier\KatalogGier\bin\Debug\System.Buffers.xml
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\KatalogGier.csprojAssemblyReference.cache
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\Kontrolki\HasloKontrolka.g.cs
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\MainWindow.g.cs
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\Pages\Logowanie.g.cs
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\Pages\MainPage.g.cs
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\Pages\OcenianieGier.g.cs
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\Pages\Rejestracja.g.cs
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\Pages\Ustawienia.g.cs
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\App.g.cs
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\KatalogGier_Content.g.cs
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\KatalogGier_MarkupCompile.cache
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\KatalogGier_MarkupCompile.lref
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\Kontrolki\HasloKontrolka.baml
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\MainWindow.baml
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\Pages\Logowanie.baml
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\Pages\MainPage.baml
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\Pages\OcenianieGier.baml
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\Pages\Rejestracja.baml
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\Pages\Ustawienia.baml
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\KatalogGier.g.resources
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\KatalogGier.Properties.Resources.resources
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\KatalogGier.csproj.GenerateResource.cache
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\KatalogGier.csproj.CoreCompileInputs.cache
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\KatalogGier.csproj.CopyComplete
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\KatalogGier.exe
+F:\Zajecia SM9\KatalogGier\KatalogGier\obj\Debug\KatalogGier.pdb
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\mongocrypt.dll
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\KatalogGier.exe.config
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\KatalogGier.exe
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\KatalogGier.pdb
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\Crc32C.NET.dll
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\DnsClient.dll
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\MongoDB.Bson.dll
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\MongoDB.Driver.dll
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\MongoDB.Libmongocrypt.dll
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\SharpCompress.dll
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\Snappy.NET.dll
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\System.Buffers.dll
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\Crc32C.NET.xml
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\DnsClient.xml
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\MongoDB.Bson.xml
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\MongoDB.Driver.xml
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\MongoDB.Driver.Core.xml
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\Snappy.NET.xml
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\bin\Debug\System.Buffers.xml
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\KatalogGier.csprojAssemblyReference.cache
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\Kontrolki\HasloKontrolka.g.cs
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\MainWindow.g.cs
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\Pages\Logowanie.g.cs
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\Pages\MainPage.g.cs
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\Pages\OcenianieGier.g.cs
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\Pages\Rejestracja.g.cs
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\Pages\Ustawienia.g.cs
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\App.g.cs
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\KatalogGier_Content.g.cs
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\KatalogGier_MarkupCompile.cache
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\KatalogGier_MarkupCompile.lref
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\Kontrolki\HasloKontrolka.baml
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\MainWindow.baml
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\Pages\Logowanie.baml
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\Pages\MainPage.baml
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\Pages\OcenianieGier.baml
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\Pages\Rejestracja.baml
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\Pages\Ustawienia.baml
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\KatalogGier.g.resources
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\KatalogGier.Properties.Resources.resources
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\KatalogGier.csproj.GenerateResource.cache
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\KatalogGier.csproj.CoreCompileInputs.cache
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\KatalogGier.csproj.CopyComplete
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\KatalogGier.exe
+C:\Users\marek\Desktop\Projekty CV\KatalogGier\KatalogGier\obj\Debug\KatalogGier.pdb

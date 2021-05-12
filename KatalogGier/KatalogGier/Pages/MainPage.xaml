@@ -1,0 +1,306 @@
+﻿<Page x:Class="KatalogGier.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KatalogGier.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage"
+      Loaded="Loader">
+    <Page.Resources>
+        <ControlTemplate x:Key="ComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="20" />
+                </Grid.ColumnDefinitions>
+                <Border
+                  x:Name="Border" 
+                  Grid.ColumnSpan="2"
+                  CornerRadius="0"
+                  Background="#474646"
+                  BorderBrush="#474646"
+                  BorderThickness="1" />
+                <Border 
+                  Grid.Column="0"
+                  CornerRadius="0" 
+                  Margin="1" 
+                  Background="#474646" 
+                  BorderBrush="#474646"
+                  BorderThickness="0,0,1,0" />
+                <Path 
+                  x:Name="Arrow"
+                  Grid.Column="1"     
+                  Fill="White"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Data="M0,0 L0,2 L4,6 L8,2 L8,0 L4,4 z"
+                />
+            </Grid>
+
+        </ControlTemplate>
+        <ControlTemplate x:Key="ComboBoxTextBox" TargetType="{x:Type TextBox}">
+            <Border x:Name="PART_ContentHost" Focusable="False" Background="{TemplateBinding Background}" />
+        </ControlTemplate>
+        <Style x:Key="{x:Type ComboBox}" TargetType="{x:Type ComboBox}">
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+            <Setter Property="MinWidth" Value="120"/>
+            <Setter Property="MinHeight" Value="20"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBox}">
+                        <Grid>
+                            <ToggleButton 
+                            Name="ToggleButton" 
+                            Template="{StaticResource ComboBoxToggleButton}" 
+                            Grid.Column="2" 
+                            Focusable="false"
+                            IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"
+                            ClickMode="Press">
+                            </ToggleButton>
+                            <ContentPresenter Name="ContentSite" IsHitTestVisible="False"  Content="{TemplateBinding SelectionBoxItem}"
+                            ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                            ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                            Margin="3,3,23,3"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left" />
+                            <TextBox x:Name="PART_EditableTextBox"
+                            Style="{x:Null}" 
+                            Template="{StaticResource ComboBoxTextBox}" 
+                            HorizontalAlignment="Left" 
+                            VerticalAlignment="Center" 
+                            Margin="3,3,23,3"
+                            Focusable="True" 
+                            Background="#b6b7ba"
+                            Foreground="Green"
+                            Visibility="Hidden"
+                            IsReadOnly="{TemplateBinding IsReadOnly}"/>
+                            <Popup 
+                            Name="Popup"
+                            Placement="Bottom"
+                            IsOpen="{TemplateBinding IsDropDownOpen}"
+                            AllowsTransparency="True" 
+                            Focusable="False"
+                            PopupAnimation="Slide">
+
+                                <Grid Name="DropDown"
+                              SnapsToDevicePixels="True"                
+                              MinWidth="{TemplateBinding ActualWidth}"
+                              MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <Border 
+                                x:Name="DropDownBorder"
+                                Background="#474646"
+                                BorderThickness="1"
+                                BorderBrush="Black"/>
+                                    <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
+                                        <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                    </ScrollViewer>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="HasItems" Value="false">
+                                <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#474646"/>
+                            </Trigger>
+                            <Trigger Property="IsGrouping" Value="true">
+                                <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                            </Trigger>
+                            <Trigger SourceName="Popup" Property="Popup.AllowsTransparency" Value="true">
+                                <Setter TargetName="DropDownBorder" Property="CornerRadius" Value="0"/>
+                                <Setter TargetName="DropDownBorder" Property="Margin" Value="0,2,0,0"/>
+                            </Trigger>
+                            <Trigger Property="IsEditable"  Value="true">
+                                <Setter Property="IsTabStop" Value="false"/>
+                                <Setter TargetName="PART_EditableTextBox" Property="Visibility" Value="Visible"/>
+                                <Setter TargetName="ContentSite" Property="Visibility" Value="Hidden"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="{x:Type ComboBoxItem}" TargetType="{x:Type ComboBoxItem}">
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                        <Border Name="Border"
+                              Padding="2"
+                              SnapsToDevicePixels="true">
+                            <ContentPresenter />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsHighlighted" Value="true">
+                                <Setter TargetName="Border" Property="Background" Value="#FF4F4F4F"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#888888"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="AnimationTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="#656665"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+
+        <Style x:Key="listLabel" TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+        </Style>
+        <Style x:Key="listTextBlock" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
+            <Setter Property="Margin" Value="10,0,0,0"/>
+        </Style>
+        <DataTemplate x:Key="GameList">
+            <Grid Background="#474646" Margin="10,0,0,25" MouseLeftButtonUp="WybranaGra" Tag="{Binding Path=Gra_Id}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Grid.RowSpan="3" Name="gameIcon" Width="200" Source="{Binding Path=Image}"/>
+                <Label Margin="10,0,0,0" Style="{StaticResource listLabel}" Grid.Column="1" Name="gameLabelNazwa" Content="{Binding Path=Nazwa}"/>
+                <Label Margin="10,0,0,10" Style="{StaticResource listLabel}" Grid.Column="1" Grid.Row="1" Name="gameLabelTyp" Content="{Binding Path=Typ}"/>
+                <TextBlock  Width="525" Style="{StaticResource listTextBlock}" Grid.Column="1" Grid.Row="2" Name="gameTextBlockOpis" Text="{Binding Path=Opis}"/>
+            </Grid>
+        </DataTemplate>
+
+
+
+        <ControlTemplate x:Key="ScrollViewTemplate" TargetType="{x:Type ScrollViewer}">
+            <Border BorderBrush="{TemplateBinding BorderBrush}"
+
+            BorderThickness="{TemplateBinding BorderThickness}"
+
+            HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+
+            VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                <Grid 
+                    Background="#474646"
+                    HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <ScrollContentPresenter 
+                        Grid.Column="0" Grid.ColumnSpan="2"
+                        Grid.Row="0" Grid.RowSpan="2"
+                        KeyboardNavigation.DirectionalNavigation="Local"
+                        CanContentScroll="True"
+                        CanHorizontallyScroll="False"
+                        CanVerticallyScroll="True"
+                    />
+
+                    <ScrollBar Name="PART_VerticalScrollBar"
+
+                   Grid.Column="1" Grid.Row="0"
+
+                   Padding="0,0,0,3"
+                   
+                   Background="#474646"
+
+                   Value="{TemplateBinding VerticalOffset}"
+
+                   Maximum="{TemplateBinding ScrollableHeight}"
+
+                   ViewportSize="{TemplateBinding ViewportHeight}"
+
+                   Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"/>
+                </Grid>
+            </Border>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="defaulttemplate" TargetType="{x:Type ListView}">
+            <Border BorderBrush="{TemplateBinding BorderBrush}"
+          BorderThickness="{TemplateBinding BorderThickness}"
+          Background="{TemplateBinding Background}"
+          Padding="1"
+          SnapsToDevicePixels="True">
+                <ScrollViewer Focusable="False"
+
+                   Padding="{TemplateBinding Padding}"
+
+                   Template="{StaticResource ScrollViewTemplate}"
+                   >
+                    <ItemsPresenter/>
+                </ScrollViewer>
+            </Border>
+        </ControlTemplate>
+
+    </Page.Resources>
+    <Grid Background="#474646">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="#838584" BorderThickness="0,0,0,1">
+            <Grid Background="#474646">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <ComboBox SelectionChanged="searchType_SelectionChanged" Margin="10,10,0,0" HorizontalAlignment="Left" Name="searchType" Background="#474646" Width="100" Height="25">
+                    <ComboBoxItem Name="Nazwa">Nazwa</ComboBoxItem>
+                    <ComboBoxItem Name="Typ">Typ</ComboBoxItem>
+                    <ComboBoxItem Name="Ocena">Ocena</ComboBoxItem>
+                </ComboBox>
+                <StackPanel Margin="20,0,0,0" HorizontalAlignment="Left" Grid.Column="1" Orientation="Horizontal" Background="#474646">
+                    <TextBox Name="searchTextBox" Style="{StaticResource AnimationTextBoxStyle}" Width="150" Height="25"/>
+                    <Image Margin="10,0,0,0" Height="15" Source="/Icons/search.png" MouseLeftButtonUp="Search"/>
+                </StackPanel>
+                <StackPanel Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,0">
+                    <Label VerticalContentAlignment="Center" Foreground="White" FontSize="12" FontFamily="Tw Cen MT" Name="nazwaUzytkownika"></Label>
+                    <Image Height="12" Source="/Icons/gear.png" MouseLeftButtonUp="Ustawienia"/>
+                    <Image Margin="10,0,0,0" Height="12" Source="/Icons/logout.png" MouseLeftButtonUp="Logout"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="1" Grid.RowSpan="3">
+            <ListView Template="{StaticResource defaulttemplate}" BorderThickness="0" Background="#474646" Name="gameList"  ItemTemplate="{StaticResource GameList}">
+            </ListView>
+        </Grid>
+    </Grid>
+</Page>

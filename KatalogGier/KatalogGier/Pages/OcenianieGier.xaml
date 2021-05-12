@@ -1,0 +1,172 @@
+﻿<Page x:Class="KatalogGier.Pages.OcenianieGier"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KatalogGier.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="OcenianieGier"
+      Loaded="Page_Loaded">
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10,10,0,0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="#474646"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border 
+                         Background="{TemplateBinding Background}" 
+                         BorderBrush="{TemplateBinding BorderBrush}" 
+                         BorderThickness="{TemplateBinding BorderThickness}" 
+                         Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Background" Value="#535453"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="CenenianieLabel" TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="Margin" Value="10,0,0,0"/>
+        </Style>
+        <Style x:Key="OcenionaLabel" TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="BorderThickness" Value="0,1,0,0"/>
+            <Setter Property="BorderBrush" Value="#838584"/>
+        </Style>
+        <Style TargetType="RadioButton">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+    </Page.Resources>
+    <Grid Background="#474646">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="#838584" BorderThickness="0,0,0,1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Margin="20" HorizontalAlignment="Left">
+                    <Image Height="20" Source="/Icons/back.png" MouseLeftButtonUp="PrevGame"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Column="1" Grid.ColumnSpan="2">
+                    <Label Style="{StaticResource CenenianieLabel}">Ocenianie</Label>
+                    <Label Style="{StaticResource CenenianieLabel}">
+                        <Hyperlink Name="ocenianaGraHyperLink" RequestNavigate="ocenianaGraHyperLink_RequestNavigate">
+                            <Run Name="ocenianaGraLabel"/>
+                        </Hyperlink>
+                    </Label>
+                </StackPanel>
+                <StackPanel Grid.Column="3" Margin="20" HorizontalAlignment="Right">
+                    <Image Source="/Icons/next.png" Height="20" MouseLeftButtonUp="NextGame" Name="nextArrow"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="1" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Margin="20,0,0,0" Height="250" Name="ocenianaGraImage"/>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                <TextBlock  Margin="10,10,10,0" Name="graOpis" Width="380"/>
+                </ScrollViewer>
+                <StackPanel Grid.Row="1">
+                    <StackPanel Orientation="Horizontal">
+                        <Label>Producent:</Label>
+                        <Label Name="graProducent"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label>Kraj produkcji</Label>
+                        <Label Name="krajProdukcjiLabel"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Margin="0,0,0,10">
+                    <StackPanel Orientation="Horizontal">
+
+                        <Label>Średnia ocena</Label>
+                        <Label Name="sredniaOcenaLabel"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label>Wymagania</Label>
+                        <Label Name="wymaganiaLabel"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image MouseLeftButtonUp="Exit" Grid.Column="3" Margin="0,0,20,20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Source="/Icons/logout.png" Width="20"/>
+            <StackPanel Grid.Column="1" HorizontalAlignment="Center"  Name="Oceniona" Grid.ColumnSpan="2">
+                <Label Style="{StaticResource OcenionaLabel}" HorizontalContentAlignment="Center" >Ta gra zostałą już przez ciebie oceniona!</Label>
+                <StackPanel Orientation="Horizontal" >
+                    <Label>Twoja ocena:</Label>
+                    <Label Name="ocenaLabel"/>
+                </StackPanel>
+                <Button Click="DeleteOcena">Usuń ocenę!</Button>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Visibility="Hidden" Name="ocenianie" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton Click="SetOcena" Tag="1" Margin="5">1</RadioButton>
+                    <RadioButton Click="SetOcena" Tag="2" Margin="5">2</RadioButton>
+                    <RadioButton Click="SetOcena" Tag="3" Margin="5">3</RadioButton>
+                    <RadioButton Click="SetOcena" Tag="4" Margin="5">4</RadioButton>
+                    <RadioButton Click="SetOcena" Tag="5" Margin="5">5</RadioButton>
+                </StackPanel>
+                <Button Click="Ocen">
+                    Oceń!
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

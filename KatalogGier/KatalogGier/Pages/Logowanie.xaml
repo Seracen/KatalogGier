@@ -1,0 +1,115 @@
+﻿<Page x:Class="KatalogGier.Pages.Logowanie"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KatalogGier.Pages"
+      xmlns:control ="clr-namespace:KatalogGier.Kontrolki"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="801"
+      Title="Logowanie">
+    <Page.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="#474646"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Margin="{TemplateBinding Margin}"
+                         Background="{TemplateBinding Background}" 
+                         BorderBrush="{TemplateBinding BorderBrush}" 
+                         BorderThickness="{TemplateBinding BorderThickness}" 
+                         Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#dbc832"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="labelTextBlock" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#474646"/>
+            <Setter Property="TextDecorations" Value="Underline"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="0,10,0,10"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="#dbc832"/>
+
+        </Style>
+
+        <Style x:Key="Logowanie" TargetType="Label">
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="Foreground" Value="#474646"/>
+        </Style>
+        <Style x:Key="registerLabel" TargetType="Label">
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="Foreground" Value="#474646"/>
+            <Setter Property="Padding" Value="5,10,0,0"/>
+        </Style>
+    </Page.Resources>
+    <Grid Background="#474646">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Name="MainIcon" Grid.ColumnSpan="2" Source="/Icons/1.jpg" Margin="10,0,20,0"/>
+        <Grid Grid.Column="2" Background="#dbc832">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition  Height="auto"/>
+                <RowDefinition  Height="auto"/>
+                <RowDefinition />
+                <RowDefinition Height="auto"/>
+                <RowDefinition  />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1" Style="{StaticResource Logowanie}" Margin="20,0,0,0">
+                LOGOWANIE
+            </Label>
+            <TextBox VerticalAlignment="Bottom" HorizontalAlignment="Left" Background="#474646" Grid.Row="2" Name="loginTextBox">
+                Login
+            </TextBox>
+
+            <control:HasloKontrolka VerticalAlignment="Top"  Grid.Row="3" x:Name="hasloKontrolka">
+            </control:HasloKontrolka>
+
+            <Button IsDefault="True" Grid.Row="5" Click="Zaloguj">Zaloguj</Button>
+
+
+            <Label Style="{StaticResource registerLabel}" Grid.Row="6">Nie masz jeszcze konta?</Label>
+            <Label VerticalAlignment="Top"  Grid.Row="7" MouseLeftButtonUp="Rejestracja">
+                <TextBlock Style="{StaticResource labelTextBlock}">
+                        Załóż je teraz!
+                </TextBlock>
+            </Label>
+
+        </Grid>
+    </Grid>
+</Page>
